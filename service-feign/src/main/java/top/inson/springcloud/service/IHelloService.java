@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "eureka-client")
+@FeignClient(value = "eureka-client", fallback = SchedualServiceHystrix.class)
 public interface IHelloService {
 
     @GetMapping("/hello/sayHello")
