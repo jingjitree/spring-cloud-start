@@ -16,8 +16,8 @@ public class HelloController {
 
     @GetMapping("/sayHello")
     public String sayHello(@RequestParam(required = false, defaultValue = "jingjitree") String username){
-        log.info("进入了欢迎页面" + username);
-        return "hello world!" + username;
+        log.info("eureka-client进入了欢迎页面" + username);
+        return "eureka-client hello world!" + username;
     }
 
 
